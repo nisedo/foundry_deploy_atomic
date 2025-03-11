@@ -1,0 +1,22 @@
+# Environment variables
+.env
+
+# Foundry specific
+cache/
+out/
+broadcast/**/dry-run/
+
+# Node modules
+node_modules/
+
+# Build artifacts
+/build/
+/dist/
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+
+msg.md
