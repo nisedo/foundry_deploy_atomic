@@ -33,6 +33,8 @@ forge script script/DeployWithConstructor.s.sol:DeployWithConstructor --rpc-url 
 
 This approach uses only 1 transaction since the initialization happens in the constructor during deployment.
 
+**Results:** [1.DeployWithConstructor.md](https://github.com/nisedo/foundry_deploy_atomic/blob/main/1.DeployWithConstructor.md?plain=1)
+
 ### Approach 2: Post-Deployment Initialization (2 Transactions in a Single Broadcast)
 
 Deploy and then initialize the contract:
@@ -43,6 +45,8 @@ forge script script/DeployWithInitialize.s.sol:DeployWithInitialize --rpc-url $S
 
 This script uses Foundry's broadcast mechanism, which may group transactions. To understand how many transactions are happening, check the logs in the console.
 
+**Results:** [2.DeployWithInitialize.md](https://github.com/nisedo/foundry_deploy_atomic/blob/main/2.DeployWithInitialize.md?plain=1)
+
 ### Approach 3: Explicit Separate Transactions
 
 Deploy and initialize with clearly separate transactions:
@@ -52,3 +56,5 @@ forge script script/DeployThenInitialize.s.sol:DeployThenInitialize --rpc-url $S
 ```
 
 This approach explicitly separates deployment and initialization into different transactions.
+
+**Results:** [3.DeployThenInitialize.md](https://github.com/nisedo/foundry_deploy_atomic/blob/main/3.DeployThenInitialize.md?plain=1)
